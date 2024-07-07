@@ -47,6 +47,8 @@
             lkbReadSend = new LinkLabel();
             lkbClearSend = new LinkLabel();
             groupboxRecSetting = new GroupBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
             chkRecSend = new CheckBox();
             lkbSaveRev = new LinkLabel();
             rbtnUnicode = new RadioButton();
@@ -91,8 +93,6 @@
             label6 = new Label();
             toolTip1 = new ToolTip(components);
             timerIcon = new System.Windows.Forms.Timer(components);
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
             panel_Setting.SuspendLayout();
             groupboxSendSetting.SuspendLayout();
             groupboxRecSetting.SuspendLayout();
@@ -297,6 +297,30 @@
             groupboxRecSetting.TabIndex = 2;
             groupboxRecSetting.TabStop = false;
             groupboxRecSetting.Text = "接收设置";
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(205, 84);
+            checkBox2.Margin = new Padding(6);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(68, 28);
+            checkBox2.TabIndex = 11;
+            checkBox2.Text = "RTS";
+            checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(205, 40);
+            checkBox1.Margin = new Padding(6);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(72, 28);
+            checkBox1.TabIndex = 10;
+            checkBox1.Text = "DTR";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // chkRecSend
             // 
@@ -827,28 +851,6 @@
             // 
             timerIcon.Interval = 300;
             timerIcon.Tick += timerIcon_Tick;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(205, 40);
-            checkBox1.Margin = new Padding(6);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(72, 28);
-            checkBox1.TabIndex = 10;
-            checkBox1.Text = "DTR";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(205, 84);
-            checkBox2.Margin = new Padding(6);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(68, 28);
-            checkBox2.TabIndex = 11;
-            checkBox2.Text = "RTS";
-            checkBox2.UseVisualStyleBackColor = true;
             // 
             // LUART
             // 

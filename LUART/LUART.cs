@@ -506,7 +506,7 @@ namespace LUART
             {
                 myStream = new StreamWriter(saveFileDialog1.FileName);
                 //写入文件
-                myStream.Write(txtShowData.Text); 
+                myStream.Write(txtShowData.Text);
                 myStream.Close();
             }
         }
@@ -590,7 +590,36 @@ namespace LUART
             else if (icon_flag == 2)
             {
                 this.Icon = Properties.Resources.luart_open_2;
-            }    
+            }
         }
+
+        #region DTR
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ComDevice.DtrEnable == true)
+            {
+                ComDevice.DtrEnable = true;
+            }
+            else
+            {
+                ComDevice.DtrEnable = false;
+            }
+
+        }
+        #endregion
+
+        # region RTS
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ComDevice.DtrEnable == true)
+            {
+                ComDevice.RtsEnable = true;
+            }
+            else
+            {
+                ComDevice.RtsEnable = false;
+            }
+        }
+        #endregion
     }
 }
