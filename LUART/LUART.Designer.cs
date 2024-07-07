@@ -91,6 +91,8 @@
             label6 = new Label();
             toolTip1 = new ToolTip(components);
             timerIcon = new System.Windows.Forms.Timer(components);
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
             panel_Setting.SuspendLayout();
             groupboxSendSetting.SuspendLayout();
             groupboxRecSetting.SuspendLayout();
@@ -276,6 +278,8 @@
             // 
             // groupboxRecSetting
             // 
+            groupboxRecSetting.Controls.Add(checkBox2);
+            groupboxRecSetting.Controls.Add(checkBox1);
             groupboxRecSetting.Controls.Add(chkRecSend);
             groupboxRecSetting.Controls.Add(lkbSaveRev);
             groupboxRecSetting.Controls.Add(rbtnUnicode);
@@ -824,6 +828,28 @@
             timerIcon.Interval = 300;
             timerIcon.Tick += timerIcon_Tick;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(205, 40);
+            checkBox1.Margin = new Padding(6);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(72, 28);
+            checkBox1.TabIndex = 10;
+            checkBox1.Text = "DTR";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(205, 84);
+            checkBox2.Margin = new Padding(6);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(68, 28);
+            checkBox2.TabIndex = 11;
+            checkBox2.Text = "RTS";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
             // LUART
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
@@ -923,6 +949,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox chkRecSend;
         private System.Windows.Forms.Timer timerIcon;
+        private CheckBox checkBox2;
+        private CheckBox checkBox1;
     }
 }
 
